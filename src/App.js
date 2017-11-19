@@ -6,22 +6,24 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="top">
-            <input type="text" placeholder="Buscar"/>
+        <div className="app-header">
+            <input type="text" placeholder="Search"/>
         </div>
-        <div className="app">
-            <div className="post">
-                <div className="header">
-                    <img src={avatar} alt="" className="avatar"></img>
+        <div className="app-moments">
+            <div className="moment">
+                <div className="moment-header">
+                    <img src={avatar} alt="" className="avatar-picture"></img>
                     <div className="avatar-name">caiocolaiacovo</div>
                 </div>
-                <div className="photo">
-                    <img src="https://iso.500px.com/wp-content/uploads/2016/11/stock-photo-159533631-1500x1000.jpg" />
+                <div className="moment-picture">
+                    {/*<img src="https://iso.500px.com/wp-content/uploads/2016/11/stock-photo-159533631-1500x1000.jpg"></img>*/}
+                    {/*<img src="http://cdn7.viralscape.com/wp-content/uploads/2015/02/Dog-Portrait-15.jpg"></img>*/}
+                    <img src="https://i1.wp.com/www.k9magazine.com/wp-content/uploads/YuCALM_Dog_Master1_Print.jpg?resize=1000%2C600"></img>
                 </div>
                 <div className="interaction">
                     <i className="fa fa-heart-o fa-lg" aria-hidden="true"></i>
                     <i className="fa fa-comment-o fa-lg" aria-hidden="true"></i>
-                    <div className="likes-quantity">10 curtidas</div>
+                    <div className="likes-quantity">10 reactions</div>
                 </div>
             </div>
         </div>
