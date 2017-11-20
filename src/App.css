@@ -5,6 +5,12 @@ body {
   background-color: #fafafa;
 }
 
+a {
+  color: #262626;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .app-header {
   position: fixed;
   text-align: center;
@@ -90,24 +96,45 @@ body {
 
 .interaction {
   min-height: 100px;
-  padding: 15px;
+  padding: 11px 15px 15px 15px;
 }
 
-.interaction i {
+.interaction-icons {
+  width: 100%;
+  height: 20px;
+}
+
+.interaction-icons i {
+  margin-right: 15px;
   float: left;
 }
 
-.interaction .fa-comment-o {
-  margin-left: 10px;
+.interaction-icons .fa-ellipsis-h {
+  float: right;
 }
 
-
-
-
-
-.likes-quantity {
+.interaction-reactions {
   width: 100%;
   float: left;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+
+.interaction-comments {
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+}
+
+.interaction-comments ul {
+  list-style-type:none;
+  -webkit-padding-start: 0px;
+  text-align: left;
+  margin: 0;
+}
+
+.interaction-elapsed-time {
+  float: left;
+  width: 100%;
+  height: 30px;
 }
