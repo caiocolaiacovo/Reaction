@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
-import avatar from '../avatar.png';
+//import avatar from '../avatar.png';
 
 export default class Moment extends Component {
+
+    componentWillMount() {
+        
+    }
+
+    countReactions() {
+        if (this.props.moment.reactions === 0)
+            return "No reactions yet. Be the first to react to this!";
+        
+        let reactionsText = `${this.props.moment.reactions} reaction`;
+
+        if (this.props.moment.reactions > 1)
+            reactionsText += "s";
+
+        return reactionsText;
+    }
+
     render() {
+        console.log('render');
         return (
             <div className="moment">
                 <div className="moment-header">
-                    <img src={avatar} alt="" className="avatar-picture"></img>
-                    <div className="avatar-name"><a href="#">caiocolaiacovo</a></div>
+                    <img src={this.props.moment.user.avatar} alt="" className="avatar-picture"></img>
+                    <div className="avatar-name"><a href="#">{this.props.moment.user.name} </a></div>
                 </div>
                 <div className="moment-picture">
-                    <img src="https://i1.wp.com/www.k9magazine.com/wp-content/uploads/YuCALM_Dog_Master1_Print.jpg?resize=1000%2C600"></img>
+                    <img src={this.props.moment.picture} alt=""></img>
                 </div>
                 <div className="interaction">
                     <div className="interaction-icons">
@@ -19,17 +37,23 @@ export default class Moment extends Component {
                         <i className="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
                     </div>
                     <div className="interaction-reactions">
-                        <a href="#">10 reactions</a>
+                        <a href="#">{this.countReactions()}</a>
                     </div>
                     <div className="interaction-comments">
                         <ul>
-                            <li><a href="#">user1</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis nisi in sapien fermentum euismod</li>
-                            <li><a href="#">user2</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis nisi in sapien fermentum euismod</li>
-                            <li><a href="#">user3</a> Lorem ipsum dolor sit amet</li>
+                            {
+                                this.props.moment.comments.map(function(comment, index) {
+                                    return (
+                                        <li key={comment.user.name + index}>
+                                            <a href={comment.user.profile}>{comment.user.name}</a> {comment.text}
+                                        </li>
+                                    );
+                                })
+                            }
                         </ul>
                     </div>
                     <div className="interaction-elapsed-time">
-                        25 MINUTES AGO
+                        {this.props.moment.elapsedTime}
                     </div>
                     <div className="interaction-new-comment">
                         <textarea placeholder="Leave your message..."></textarea>
