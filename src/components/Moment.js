@@ -11,12 +11,7 @@ export default class Moment extends Component {
         if (this.props.moment.reactions === 0)
             return "No reactions yet. Be the first to react to this!";
         
-        let reactionsText = `${this.props.moment.reactions} reaction`;
-
-        if (this.props.moment.reactions > 1)
-            reactionsText += "s";
-
-        return reactionsText;
+        return `${this.props.moment.reactions} reaction` + (this.props.moment.reactions > 1 ? "s" : "");
     }
 
     render() {
@@ -32,8 +27,7 @@ export default class Moment extends Component {
                 </div>
                 <div className="interaction">
                     <div className="interaction-icons">
-                        <i className="fa fa-heart-o fa-lg" aria-hidden="true"></i>
-                        <i className="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                        <button><img src={process.env.PUBLIC_URL + '/emoticons/no-reaction.png'} alt="logo"></img></button>
                         <i className="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
                     </div>
                     <div className="interaction-reactions">
