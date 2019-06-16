@@ -1,2 +1,2 @@
 export const GET_MOMENTS = 'GET_MOMENTS';
-export const UPDATE_FEED = 'GET_FEED';
+export const RECEIVE_MOMENTS = 'RECEIVE_MOMENTS';

@@ -11,7 +11,7 @@ a {
   font-weight: 600;
 }
 
-.app-header {
+.app__header {
   position: fixed;
   text-align: center;
   top: 0;
@@ -23,7 +23,7 @@ a {
   background-color: white;
 }
 
-.app-header input{
+.app__header input {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 3px;
@@ -31,13 +31,13 @@ a {
   width: 200px;
   padding: 12px 20px;
   margin: 20px 0;
-  font-size:11px;
+  font-size: 11px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   outline: none;
   background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-position: 9px 8px; 
+  background-position: 9px 8px;
   background-repeat: no-repeat;
   padding-left: 40px;
 }
@@ -47,8 +47,8 @@ a {
   text-align: center;
   top: 80px;
   padding-bottom: 40px;
-  max-width:600px; 
-  margin:0 auto;
+  max-width: 600px;
+  margin: 0 auto;
   padding-top: 20px;
 }
 
@@ -107,21 +107,21 @@ a {
   width: 100%;
   height: 20px;
 }
-  .interaction-icons button {
-    padding: 0;
-    border: none;
-    background: none;
-  }
+.interaction-icons button {
+  padding: 0;
+  border: none;
+  background: none;
+}
 
-  .interaction-icons img {
-    width: 22px;
-    margin-right: 15px;
-    float: left;
-  }
+.interaction-icons img {
+  width: 22px;
+  margin-right: 15px;
+  float: left;
+}
 
-  .interaction-icons .fa-ellipsis-h {
-    float: right;
-  }
+.interaction-icons .fa-ellipsis-h {
+  float: right;
+}
 
 .interaction-reactions {
   width: 100%;
@@ -135,16 +135,16 @@ a {
   float: left;
 }
 
-  .interaction-comments ul {
-    list-style-type:none;
-    -webkit-padding-start: 0px;
-    text-align: left;
-    margin: 0;
-  }
+.interaction-comments ul {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+  text-align: left;
+  margin: 0;
+}
 
-  .interaction-comments ul li {
-    margin-top: 6px;
-  }
+.interaction-comments ul li {
+  margin-top: 6px;
+}
 
 .interaction-elapsed-time {
   float: left;
@@ -168,26 +168,25 @@ a {
 }
 
 .popover {
-  
-  position: absolute; 
+  position: absolute;
   top: 100px;
 }
-  .popover .background {
-    position: absolute;
-    border-radius: 50px;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-  }
-  .popover .reactions {
-    position: relative;
-    z-index: 0;
-    padding: 10px 10px 10px 0px;
-  }
+.popover .background {
+  position: absolute;
+  border-radius: 50px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.popover .reactions {
+  position: relative;
+  z-index: 0;
+  padding: 10px 10px 10px 0px;
+}
 
-  .popover .reactions img {
-    margin-left: 10px;
-    z-index: 1;
-    width: 40px;
-  }
+.popover .reactions img {
+  margin-left: 10px;
+  z-index: 1;
+  width: 40px;
+}

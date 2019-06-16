@@ -1,5 +1,8 @@
-import combineReducers from 'redux';
+import { combineReducers } from 'redux';
+import moments from './moments';
 
-const Reducers = combineReducers({});
+const rootReducer = combineReducers({
+  moments,
+});
 
-export default Reducers;
+export default rootReducer;
