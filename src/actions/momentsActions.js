@@ -1,15 +1,14 @@
 import { RECEIVE_MOMENTS } from './actionTypes';
-import axios from '../config/axios';
+import ReactionApi from '../services/reactionApi';
 
 const receiveMoments = moments => ({
   type: RECEIVE_MOMENTS,
   moments,
 });
 
-// Action creators
 const getMoments = () => async (dispatch) => {
-  const data = await axios.get('moments');
-  dispatch(receiveMoments(data));
+  const response = await ReactionApi.getMoments();
+  dispatch(receiveMoments(response.data));
 };
 
 export default getMoments;
